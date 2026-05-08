@@ -10,7 +10,7 @@
 <body>
   <!--
     編集メモ:
-    ・「山田 花子」「hello@example.com」「GoogleフォームURL」はご自身の情報に差し替えてください。
+    ・「岩見 梓司」「jiveatnine@gmail.com」などはご自身の情報に合わせて変更できます。
     ・各セクションの見出しや本文は、仕事の内容に合わせて自由に変更できます。
   -->
 
@@ -31,9 +31,15 @@
         <p class="eyebrow">Freelance Writer &amp; Editor</p>
         <h1>事業の想いと専門性を、信頼される文章に整えます。</h1>
         <p class="hero-lead">
-          インタビュー記事、経営者の発信支援、M&amp;A関連コンテンツ、SEO記事制作まで。
-          読み手に伝わり、事業の前進につながるコンテンツづくりを伴走します。
+          インタビュー、文章作成、発信支援、簡易Webページ制作まで。
+          伝えたいことを、伝わる形に整えます。
         </p>
+        <div class="hero-note">
+          <p>
+            このサイトも、AIコーディングツールを活用して制作しています。
+            小規模なサービス紹介ページやLPであれば、文章設計から公開用ページの作成まで対応できます。
+          </p>
+        </div>
         <div class="hero-actions">
           <a class="button primary" href="#contact">相談する</a>
           <a class="button secondary" href="#service">できることを見る</a>
@@ -152,11 +158,15 @@
 
     <!-- 5. プロフィール: 名前、経歴、写真の有無に合わせて差し替えてください -->
     <section id="profile" class="section profile-section">
-      <div class="profile-card">
-        <div class="profile-image" aria-hidden="true">YH</div>
+      <div class="profile-panel">
+        <div class="profile-image" aria-label="プロフィール写真の代替イメージ">
+          <!-- 画像を差し替える場合は images/profile.png を変更してください -->
+          <img src="images/profile.png" alt="岩見 梓司のプロフィール画像">
+        </div>
         <div class="profile-text">
-          <p class="eyebrow">Profile</p>
-          <h2>山田 花子</h2>
+          <p class="eyebrow">PROFILE</p>
+          <span class="profile-line" aria-hidden="true"></span>
+          <h2>岩見 梓司</h2>
           <p>
             フリーライター・編集者。事業会社での広報・編集経験を経て独立。
             現在は、経営者インタビュー、BtoBコンテンツ、M&amp;A関連の記事制作を中心に活動しています。
@@ -164,6 +174,19 @@
           <p>
             取材相手の言葉を大切にしながら、読者に伝わる構成と表現へ整えることを心がけています。
           </p>
+          <div class="profile-tags" aria-label="対応領域">
+            <span>Webコンテンツ</span>
+            <span>取材・インタビュー</span>
+            <span>SEOライティング</span>
+            <span>経営者発信</span>
+            <span>SNS運用</span>
+            <span>簡易Web制作</span>
+          </div>
+          <div class="profile-links" aria-label="外部リンク">
+            <a href="https://note.com/iwm_s" target="_blank" rel="noopener noreferrer">note</a>
+            <a href="https://stand.fm/channels/5e86845e35414a1b15a1cf7a" target="_blank" rel="noopener noreferrer">音声配信</a>
+            <a href="https://x.com/iwamishinji" target="_blank" rel="noopener noreferrer">X</a>
+          </div>
         </div>
       </div>
     </section>
@@ -200,27 +223,36 @@
       </ol>
     </section>
 
-    <!-- 7. お問い合わせ: メールアドレスとGoogleフォームURLを差し替えてください -->
+    <!-- 7. お問い合わせ: HTML/CSSのみのフォームです。実際に送信する場合は action の送信先を設定してください -->
     <section id="contact" class="section contact-section">
       <div class="contact-inner">
-        <p class="eyebrow">Contact</p>
+        <p class="eyebrow">CONTACT</p>
+        <span class="contact-line" aria-hidden="true"></span>
         <h2>お問い合わせ</h2>
         <p>
-          ご相談は、内容が固まっていない段階でも歓迎です。
-          まずは制作したいテーマやお困りごとをお聞かせください。
+          執筆のご依頼・ご相談はお気軽にどうぞ。<br>
+          2営業日以内にご返信いたします。
         </p>
-        <div class="contact-actions">
-          <a class="button primary" href="mailto:hello@example.com">hello@example.com</a>
-          <a class="button secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSf_hj4bcwRQ6EQmur08E73L9CSqU0qwDLq5Lad1JKWRXf-odg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Googleフォームへ</a>
-        </div>
-        <p class="small-note">通常2営業日以内に返信します。</p>
+        <form class="contact-form" action="mailto:jiveatnine@gmail.com" method="post" enctype="text/plain">
+          <label for="name">お名前</label>
+          <input id="name" name="お名前" type="text" placeholder="山田 太郎" required>
+
+          <label for="email">メールアドレス</label>
+          <input id="email" name="メールアドレス" type="email" placeholder="example@email.com" required>
+
+          <label for="message">お問い合わせ内容</label>
+          <textarea id="message" name="お問い合わせ内容" rows="5" placeholder="依頼内容・ご質問などをご記入ください" required></textarea>
+
+          <button class="form-button" type="submit">送信する</button>
+        </form>
+        <p class="small-note">メールで直接ご連絡いただく場合: <a href="mailto:jiveatnine@gmail.com">jiveatnine@gmail.com</a></p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <!-- 年号と名前を差し替えてください -->
-    <small>&copy; 2026 山田 花子</small>
+    <small>&copy; 2026 岩見 梓司</small>
   </footer>
 </body>
 </html>
