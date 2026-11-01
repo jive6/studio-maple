@@ -309,6 +309,11 @@ h2{font-size:clamp(21px,4.6vw,28px);margin-bottom:18px}
 .note{margin-top:14px;font-size:13px;color:var(--muted);background:var(--mist);
   border-radius:10px;padding:14px 16px}
 
+/* ---------- 補助金について ---------- */
+.subsidy-list{margin-top:22px;padding-left:1.3em;max-width:44em}
+.subsidy-list li{margin-bottom:8px;line-height:1.8}
+.subsidy-cost{margin-top:18px;max-width:44em;font-weight:700;color:var(--ink)}
+
 /* ---------- 含まれる / 含まれない ---------- */
 .two{display:grid;gap:16px;margin-top:26px}
 @media(min-width:720px){.two{grid-template-columns:1fr 1fr}}
